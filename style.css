@@ -1,0 +1,26 @@
+:root{
+    --baseColor: #FAF9F7;
+    --primaryColor:#113f67;
+    --secondaryColor1:#C8DAD3;
+    --secondaryColor2:#93B5B3;
+}
+.full-screen{
+    /* background-color: var(--baseColor);; 
+    background-color: brown; */
+    height: 100vh;
+    /* margin: 0;
+    padding: 0; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+body{
+    background-color: var(--baseColor);;
+}
+.start-btn{
+     height: 40px;
+    width:150px;
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    color: var(--baseColor);
+}
