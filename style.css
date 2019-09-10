@@ -1,21 +1,17 @@
 :root{
     --baseColor: #FAF9F7;
     --primaryColor:#113f67;
+    --primaryColor1:#1A237E;
     --secondaryColor1:#C8DAD3;
     --secondaryColor2:#93B5B3;
+    font-size: 1em;
 }
 .full-screen{
-    /* background-color: var(--baseColor);; 
-    background-color: brown; */
     height: 100vh;
-    /* margin: 0;
-    padding: 0; */
     align-items: center;
+    background-color: var(--baseColor);
     justify-content: center;
     display: flex;
-}
-body{
-    background-color: var(--baseColor);;
 }
 .start-btn{
      height: 40px;
@@ -23,4 +19,22 @@ body{
     background-color: var(--primaryColor);
     border-radius: 20px;
     color: var(--baseColor);
+}
+.heading-left{
+    height: 100px;
+    background-color: var(--baseColor);
+}
+.heading1{
+    margin-top: 40px;
+    color:var(--baseColor);
+}
+.next-btn,.submit-btn{
+    border-radius: 20px;
+    width: 80px;
+    background-color: var(--primaryColor);
+    color: var(--baseColor);
+}
+.question-no{
+    color: var(--primaryColor);
+    font-weight: bold;
 }
