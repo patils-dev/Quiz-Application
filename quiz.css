@@ -3,10 +3,11 @@
     --primaryColor:#FAFAFA;
     --notSelected:#C8DAD3;
     --selected:#93B5B3;
+    --textcolor:black;
 }
 .screen1{
     height:100vh;
-    width:100vw;
+    /* width:100wh; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -19,11 +20,12 @@
     display: flex;
     color:var(--primaryColor);
     /* margin-bottom: 10%; */
-    margin: 10%
+    /* margin: 10%; */
+    /* position: relative; */
 }
 .startButton{
     /* margin-top: 10%; */
-    margin: 10%;
+    /* margin-left: 10%; */
     height:70px;
     width:200px;
     justify-content: center;
@@ -35,30 +37,35 @@
     color:var(--baseColor);
     border-radius: 40px;
     background:var(--primaryColor);
+    /* position: relative; */
+
 }
-.startButton:hover{
+/* .startButton:hover{
     height:87.5px;
     width:220px;
     border-radius: 50px;
+} */
+.screen2{
+    height:100vh;
+    /* width:100wh; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: var(--primaryColor);
 }
-
 .questionNumber{
     font-size: 3em;
-    color: var(--primaryColor);
+    color: var(--textcolor);
 }
 .question{
-    color: var(--primaryColor);
+    color: var(--textcolor);
 }
-.prev{
-    height:40px;
-    width:100px;
+/* .prev{
     justify-content: center;
     align-items: center;
     display: flex;
     font-family:sans-serif;
     font-style:bold;
-    font-size:1em;
-    color:var(--baseColor);
     border-radius: 30px;
     background:var(--primaryColor);
 }
@@ -74,7 +81,7 @@
     color:var(--baseColor);
     border-radius: 30px;
     background:var(--primaryColor);
-}
+} */
 .submit{
     height:40px;
     width:100px;
