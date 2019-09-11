@@ -30,3 +30,102 @@
     width:220px;
     border-radius: 50px;
 }
+
+.questionNumber{
+    font-size: 3em;
+    color: var(--primaryColor);
+}
+.question{
+    color: var(--primaryColor);
+}
+.prev{
+    height:40px;
+    width:100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
+.next{
+    height:40px;
+    width:100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
+.submit{
+    height:40px;
+    width:100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
+.option1{
+    height:50px;
+    width:150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
+.option2{
+    height:50px;
+    width:150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
+.option3{
+    height:50px;
+    width:150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
+.option4{
+    height:50px;
+    width:150px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family:sans-serif;
+    font-style:bold;
+    font-size:1em;
+    color:var(--baseColor);
+    border-radius: 30px;
+    background:var(--primaryColor);
+}
