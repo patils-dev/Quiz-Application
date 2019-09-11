@@ -1,6 +1,6 @@
 :root{
-    --baseColor:#FAF9F7;
-    --primaryColor:#263238;
+    --baseColor:#4DB6AC;
+    --primaryColor:#FAFAFA;
     --notSelected:#C8DAD3;
     --selected:#93B5B3;
 }
@@ -12,7 +12,18 @@
     display: flex;
     background: var(--baseColor);
 }
+.title{
+    font-size:4em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color:var(--primaryColor);
+    /* margin-bottom: 10%; */
+    margin: 10%
+}
 .startButton{
+    /* margin-top: 10%; */
+    margin: 10%;
     height:70px;
     width:200px;
     justify-content: center;
