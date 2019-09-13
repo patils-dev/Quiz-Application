@@ -29,6 +29,7 @@
     width:200px;
     justify-content: center;
     align-items: center;
+    text-align: center;
     /* display: flex; */
     font-family:sans-serif;
     font-style:bold;
@@ -36,7 +37,10 @@
     color:var(--baseColor);
     border-radius: 40px;
     background:#FAFAFA;
+}
 
+.buttonAlign{
+    align-items: center;
 }
 /* .startButton:hover{
     height:87.5px;
