@@ -27,7 +27,7 @@
     font-size: 4em;
     display: flex; 
     color: var(--primaryColor);
-    /* padding-top: 30%; */
+    
 }
 .score{
     height: 33.33%;
@@ -37,7 +37,7 @@
     font-size: 4em;
     display: flex; 
     color: var(--primaryColor);
-    /* padding-top: 30%; */
+   
 }
 .start-btn{
     height: 60px;
@@ -61,6 +61,4 @@
     
     height: 29px;;
     cursor: pointer;
-    /* margin-left: 40%;
-    margin-top:10px; */
 }
