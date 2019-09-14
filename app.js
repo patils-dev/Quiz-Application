@@ -5,7 +5,8 @@ let selectedIndex;
 let keys=" ";
 let text;
 let queCount=1;
-let correctAns=0
+let correctAns=0;
+
 function getJSON(){
 
   $(".questionNumber").text(queCount+"/ 10")
@@ -22,12 +23,19 @@ function getJSON(){
         $(".option2").text(keys[randIndex].options[1]);
         $(".option3").text(keys[randIndex].options[2]);
         $(".option4").text(keys[randIndex].options[3]);
+        
 })
 }
-$('.submitButton').click(function(){
-  console.log(correctAns)
-    $('.score').text(correctAns+"/ 10")
-})
+
+$(".submitButton").click(displayScore())
+ 
+function displayScore()
+{
+     correctAns++;
+     console.log(correctAns)
+     $(".score").text(correctAns+"/ 10")
+}
+
 
 $(".next").click(function(){
   checkAns(selectedIndex,text);
@@ -38,9 +46,6 @@ $(".next").click(function(){
   }
   
 });
-
-
-
 
 $('div.option1').click(function(){
  
@@ -79,9 +84,10 @@ function checkAns(index,text)
   
     if(text==keys[index].answer)
     {
-      correctAns++;
+      // correctAns++;
+      displayScore();
     }
     queCount++;
-    // console.log(correctAns)
-    // console.log(queCount)
+   
 }
+  
