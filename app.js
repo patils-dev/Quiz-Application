@@ -3,13 +3,14 @@ $(document).ready(function(){
 })
 let selectedIndex;
 let keys=" ";
+let text;
 function getJSON1(){
   let queCount1=
   $.getJSON('ques-db.json',function(json){
       keys=Object.values(json)
       
       let randIndex =Math.floor(Math.round(Math.random()*(keys.length)));
-      // console.log(randIndex);
+      console.log(randIndex);
       selectedIndex=randIndex;
 
         $(".question").text(keys[randIndex].question);
@@ -22,43 +23,43 @@ function getJSON1(){
 
 $('div.option1').click(function(){
   console.log("div1")
-    let text = $(this).text();
+    text = $(this).index();
+    console.log(text)
+})
+ $(".next").click(function(){
+  console.log("checkans")
+  checkAns(selectedIndex,text);
+  getJSON1();
+});
+$('div.option2').click(function() {
+  console.log("div2")
+   text = $(this).text();
     // $(".next").click(function(){
-      console.log("checkans")
-      checkAns(selectedIndex,text);
-      getJSON1();
+    //   console.log("checkans")
+    // checkAns(selectedIndex,text);
+    // getJSON1(); 
   // });
 })
 
-// $('div.option2').click(function() {
-//   console.log("div2")
-//     let text = $(this).text();
-//     $(".next").click(function(){
-//       console.log("checkans")
-//     checkAns(selectedIndex,text);
-//     getJSON1(); 
-//   });
-// })
+$('div.option3').click(function() {
+  console.log("div3")
+    let text = $(this).text();
+  //   $(".next").click(function(){
+  //     console.log("checkans")
+  //   checkAns(selectedIndex,text);
+  //   getJSON1(); 
+  // });
+})
 
-// $('div.option3').click(function() {
-//   console.log("div3")
-//     let text = $(this).text();
-//     $(".next").click(function(){
-//       console.log("checkans")
-//     checkAns(selectedIndex,text);
-//     getJSON1(); 
-//   });
-// })
-
-// $('div.option4').click(function() {
-//   console.log("div4")
-//     let text = $(this).text();
-//     $(".next").click(function(){
-//       console.log("checkans")
-//      checkAns(selectedIndex,text);
-//     getJSON1(); 
-//   });
-// })
+$('div.option4').click(function() {
+  console.log("div4")
+    let text = $(this).text();
+  //   $(".next").click(function(){
+  //     console.log("checkans")
+  //    checkAns(selectedIndex,text);
+  //   getJSON1(); 
+  // });
+})
 
 
 let queCount=0;
@@ -66,7 +67,7 @@ let correctAns=0
 function checkAns(index,text)
 {
   console.log("checkans")
-    if(text===keys[index].answer)
+    if(text==keys[index].answer)
     {
       correctAns++;
     }
