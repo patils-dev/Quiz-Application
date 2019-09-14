@@ -27,15 +27,6 @@ function getJSON(){
 })
 }
 
-$(".submitButton").click(displayScore())
- 
-function displayScore()
-{
-     correctAns++;
-     console.log(correctAns)
-     $(".score").text(correctAns+"/ 10")
-}
-
 
 $(".next").click(function(){
   checkAns(selectedIndex,text);
@@ -84,10 +75,18 @@ function checkAns(index,text)
   
     if(text==keys[index].answer)
     {
-      // correctAns++;
-      displayScore();
+      correctAns++;
+     
     }
     queCount++;
    
 }
   
+$(".submitButton").click(displayScore())
+ 
+function displayScore()
+{
+    //  correctAns++;
+    //  console.log(correctAns)
+     $(".score").text(correctAns+"/ 10")
+}
