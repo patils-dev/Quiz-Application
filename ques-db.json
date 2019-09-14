@@ -3,42 +3,42 @@
                 "question": "Brazil belongs to?",
                 "options": [
                     "Africa",
-                    "North America",
+                    "North_America",
                     "Europe",
-                    "South America"
+                    "South_America"
                 ],
-                "answer": "3"
+                "answer": "South_America"
             },
     "q2": {
-                "question": "national animal of Australia?",
+                "question": "National animal of Australia?",
                 "options": [
                     "Lion",
                     "Tiger",
                     "Kangaroo",
                     "Panther"
                 ],
-                "answer": "2"
+                "answer": "Kangaroo"
             },
     
     "q3": {
                 "question": "What is the fastest animal alive?",
                 "options": [
-                    "Falcon",
+                    "Peregrine_Falcon",
                     "Cheetah",
                     "Sailfish",
                     "Dragonfly"
                 ],
-                "answer": "1"
+                "answer": "Peregrine_Falcon"
             },
     "q4": {
                 "question": "Light travels at its fastest in?",
                 "options": [
                     "Vacuum",
-                    "Salt-water",
-                    "Air at 0°C",
+                    "Salt_water",
+                    "Air_at_0°C",
                     "Drizzle"
                 ],
-                "answer": "0"
+                "answer":"Vacuum"
             },
     "q5": {
                 "question": "Number of rings on the Olympic flag?",
@@ -48,7 +48,7 @@
                     "5",
                     "3"
                 ],
-                "answer": "3"
+                "answer": "5"
             },
     "q6": {
                 "question": "Number of holes on a standard bowling ball?",
@@ -63,22 +63,22 @@
     "q7": {
                 "question": "What are the main colors on the flag of Spain?",
                 "options": [
-                    "Black and yellow",
-                    "Green and white",
-                    "Blue and white",
-                    "Red and yellow"
+                    "Black_and_yellow",
+                    "Green_and_white",
+                    "Blue_and_white",
+                    "Red_and_yellow"
                 ],
-                "answer": "3"
+                "answer": "Red_and_yellow"
             },
     "q8": {
                 "question": " What is the longest that an elephant has ever provably lived?",
                 "options": [
-                    "17 years",
-                    "49 years",
-                    "86 years",
-                    "142 years"
+                    "17_years",
+                    "49_years",
+                    "86_years",
+                    "142_years"
                 ],
-                "answer": 2
+                "answer": "86_years"
             },
     "q9": {
                 "question": "'War and Peace' originally written in?",
@@ -88,7 +88,7 @@
                     "Spanish",
                     "Portuguese"
                 ],
-                "answer": 0
+                "answer": "Russian"
             },
     "q10": {
                 "question": "Which of these countries was not a Soviet Republic in USSR?",
@@ -98,27 +98,27 @@
                     "Moldova",
                     "Serbia"
                 ],
-                "answer": 3
+                "answer": "Serbia"
             },
     "q11": {
                 "question": "What was the first successful vaccine developed in history?",
                 "options": [
                     "Cholera",
                     "Rabies",
-                    "Scarlet Fever",
+                    "Scarlet_Fever",
                     "Smallpox"
                 ],
-                "answer": 3
+                "answer": "Smallpox"
             },            
     "q12": {
                 "question": "What is the name for the Jewish New Year?",
                 "options": [
-                    "Yom Kippur",
-                    "Rosh Hashanah",
+                    "Yom_Kippur",
+                    "Rosh_Hashanah",
                     "Kwanzaa",
                     "Hanukkah"
                 ],
-                "answer": 1
+                "answer": "Rosh_Hashanah"
             },  
     "q13": {
                 "question": "number of blue stripes on the national flag of USA?",
@@ -128,7 +128,7 @@
                     "0",
                     "3"
                 ],
-                "answer": 2
+                "answer": "0"
             }, 
     "q14": {
                 "question": "What restaurant franchise advises you to 'Eat Fresh'?",
@@ -136,9 +136,9 @@
                     "KFC",
                     "Subway",
                     "McDonald's",
-                    "Taco Bell"
+                    "Taco_Bell"
                 ],
-                "answer": 1                
+                "answer": "Subway"                 
             },
     "q15": {
                 "question": "What did Alfred Nobel develop?",
@@ -146,9 +146,9 @@
                     "Dynamite",
                     "Nobelium",
                     "Gunpowder",
-                    "Atomic bomb"
+                    "Atomic_bomb"
                 ],
-                "answer": 0
+                "answer": "Dynamite"
             },        
     "q16": {
                 "question": "How many spaces are on a standard Monopoly board?",
@@ -158,7 +158,7 @@
                     "80",
                     "60"
                 ],
-                "answer": 1
+                "answer": "40"
             },        
             "q17": {
                 "question": "Which country hosted the Summer Olympics in 2016?",
@@ -168,7 +168,7 @@
                     "Spain",
                     "Greece"
                 ],
-                "answer": 1
+                "answer": "Brazil"
             }, 
             "q18": {
                 "question": "What temperature is the same in Celsius and Fahrenheit?",
@@ -178,17 +178,17 @@
                     "0°",
                     "-40°"
                 ],
-                "answer": 3
+                "answer": "-40°"
             }, 
             "q19": {
                 "question": "Which movie was the first to win 11 Academy Awards?",
                 "options": [
                     "Ben-Hur",
-                    "La La Land",
-                    "Sound of Music",
+                    "La_La_Land",
+                    "Sound_of_Music",
                     "Titanic"
                 ],
-                "answer": "0"
+                "answer": "Ben-Hur"
             }, 
             "q20": {
                 "question": "Which mammal first reached Earth's orbit alive?",
@@ -196,8 +196,20 @@
                     "Cat",
                     "Dog",
                     "Monkey",
-                    "Rabbit"
+                    "Dog"
                 ],
-                "answer": "1"
+                "answer": "Dog"
             }
 }
+
+
+
+
+
+
+
+
+
+
+
+

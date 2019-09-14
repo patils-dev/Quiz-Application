@@ -1,7 +1,7 @@
 :root{
     --baseColor:#4DB6AC;
     --primaryColor:#FAFAFA;
-    --notSelected:#C8DAD3;
+    --notSelected:#E0F2F1;
     --selected:#93B5B3;
     --textcolor:black;
 }
@@ -18,29 +18,13 @@
     color: var(--textcolor);
     float: left;
 }
-#que{
+.question{
     color: var(--textcolor);
     font-size: 2em;
 }
 .prev{
     margin-right: 1%;
 }
-/* .prev{
-   
-    font-size: 4em;
-    border: none;
-    background-color: #FAFAFA;
-    color: #4DB6AC;
-    font-size: 3em;
-}
-.next{
-    
-    font-size:4em;
-    border: none;
-    border: none;
-    background-color: #FAFAFA;
-    color: #4DB6AC;
-} */
 .option1{
     height:50px;
     width:150px;
@@ -52,7 +36,7 @@
     font-size:1em;
     color:black;
     border-radius: 30px;
-    background:#4DB6AC;
+    background:var(--notSelected);
     margin: 2%;
 
 }
@@ -67,7 +51,7 @@
     font-size:1em;
     color:black;
     border-radius: 30px;
-    background:#4DB6AC;
+    background:var(--notSelected);
     margin: 2%;
 
 }
@@ -82,7 +66,7 @@
     font-size:1em;
     color:black;
     border-radius: 30px;
-    background:#4DB6AC;
+    background:var(--notSelected);
     margin: 2%;
 
 }
@@ -97,7 +81,7 @@
     font-size:1em;
     color:black;
     border-radius: 30px;
-    background:#4DB6AC;
+    background:var(--notSelected);
     margin: 2%;
 
 }
