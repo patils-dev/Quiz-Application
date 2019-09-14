@@ -28,7 +28,7 @@
                     "Sailfish",
                     "Dragonfly"
                 ],
-                "answer": "Cheetah"
+                "answer": "1"
             },
     "q4": {
                 "question": "Light travels at its fastest in?",
@@ -38,7 +38,7 @@
                     "Air at 0°C",
                     "Drizzle"
                 ],
-                "answer": "Vacuum"
+                "answer": "0"
             },
     "q5": {
                 "question": "Number of rings on the Olympic flag?",
