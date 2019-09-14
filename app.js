@@ -1,7 +1,3 @@
-function getData(correctAns)
-{
-  localStorage.setItem('score', correctAns );
-}
 
 $(document).ready(function(){
     getJSON();
@@ -39,6 +35,10 @@ $(".next").click(function(){
   {
   getJSON();
   $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
+  }
+  if(queCount==10)
+  {
+    $(".submitButton").css("display", "flex");
   }
   
 });
@@ -86,7 +86,10 @@ function checkAns(index,text)
     queCount++;
    
 }
-  
+function getData(correctAns)
+{
+  localStorage.setItem('score', correctAns );
+} 
 $(".submitButton").click(displayScore())
  
 function displayScore()
