@@ -1,13 +1,15 @@
 $(document).ready(function(){
-    getJSON1();
+    getJSON();
 })
 let selectedIndex;
 let keys=" ";
 let text;
-let queCount=0;
+let queCount=1;
 let correctAns=0
-function getJSON1(){
-  let queCount1=
+function getJSON(){
+
+  $(".questionNumber").text(queCount+"/ 10")
+  
   $.getJSON('ques-db.json',function(json){
       keys=Object.values(json)
       //  console.log(keys)
@@ -22,20 +24,30 @@ function getJSON1(){
         $(".option4").text(keys[randIndex].options[3]);
 })
 }
+$('.submitButton').click(function(){
+  console.log(correctAns)
+    $('.score').text(correctAns+"/ 10")
+})
 
 $(".next").click(function(){
-  // console.log("checkans")
   checkAns(selectedIndex,text);
-  getJSON1();
+  if(queCount<11)
+  {
+  getJSON();
   $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
+  }
+  
 });
 
+
+
+
 $('div.option1').click(function(){
-  // console.log("div1")
+ 
   $(".option1").css("background-color", "#4DB6AC");
   $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
     text = $(this).text();
-    // console.log(text)
+   
 })
  
 $('div.option2').click(function() {
@@ -43,15 +55,15 @@ $('div.option2').click(function() {
   $(".option2").css("background-color", "#4DB6AC");
   $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
    text = $(this).text();
-  //  console.log(text); 
+ 
 })
 
 $('div.option3').click(function() {
-  // console.log("div3")
+ 
   $(".option3").css("background-color", "#4DB6AC");
   $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
      text = $(this).text();
-    //  console.log(text);
+    
 })
 
 $('div.option4').click(function() {
@@ -64,13 +76,12 @@ $('div.option4').click(function() {
 
 function checkAns(index,text)
 {
-  // console.log(keys[index].answer)
-  // console.log(text)
+  
     if(text==keys[index].answer)
     {
       correctAns++;
     }
     queCount++;
-    console.log(correctAns)
-    console.log(queCount)
+    // console.log(correctAns)
+    // console.log(queCount)
 }
