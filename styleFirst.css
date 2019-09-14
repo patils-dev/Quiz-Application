@@ -39,24 +39,6 @@
     font-size: 2rem;
     border: none;
 }
-/* .heading-left{
-    height: 100px;
-    background-color: var(--baseColor);
-}
-.heading1{
-    margin-top: 40px;
-    color:var(--baseColor);
-}
-.next-btn,.submit-btn{
-    border-radius: 20px;
-    width: 80px;
-    background-color: var(--primaryColor);
-    color: var(--baseColor);
-}
-.question-no{
-    color: var(--primaryColor);
-    font-weight: bold;
-} */
 .quiz-top{
     background-color:brown;
     height:100vh;

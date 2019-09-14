@@ -4,9 +4,9 @@ $(document).ready(function(){
 })
 
 function getJSON(){
+  let queCount=
   $.getJSON('ques-db.json',function(json){
-      questions = json;
-      // console.log(Object)
+      // questions = json;
       const keys = Object.values(json)
       console.log(keys);
       // [0 -> 1] * 1
@@ -14,6 +14,7 @@ function getJSON(){
       // console.log(randIndex);
       // console.log(keys[randIndex])
       // console.log(keys[randIndex].question)
+      let selectedIndex=randIndex;
       console.log(keys[randIndex].options[1])
     
         $(".question").text(keys[randIndex].question);
@@ -24,29 +25,28 @@ function getJSON(){
 
         $('div.option1').click(function() {
           let text = $(this).text();
-          // do something with the text
-          console.log(text)
-        });
+          checkAns(text,selectedIndex);
+        })
         $('div.option2').click(function() {
           let text = $(this).text();
-          // do something with the text
-          console.log(text)
+          checkAns(text,selectedIndex);
         });
         $('div.option3').click(function() {
           let text = $(this).text();
-          // do something with the text
-          console.log(text)
+          checkAns(text,selectedIndex);
         });
         $('div.option4').click(function() {
           let text = $(this).text();
-          // do something with the text
-          console.log(text)
+          checkAns(text,selectedIndex);
         });
-
-        
-  })
+})
 }
 $(".next").click(function(){
-  getJSON();
-    
+  getJSON(); 
 });
+ 
+function checkAns(text,index)
+{
+   console.log(text);
+   console.log(index);
+}
