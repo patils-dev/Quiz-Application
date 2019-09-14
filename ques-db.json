@@ -1,0 +1,215 @@
+{
+    "q1": {
+                "question": "Brazil belongs to?",
+                "options": [
+                    "Africa",
+                    "North_America",
+                    "Europe",
+                    "South_America"
+                ],
+                "answer": "South_America"
+            },
+    "q2": {
+                "question": "National animal of Australia?",
+                "options": [
+                    "Lion",
+                    "Tiger",
+                    "Kangaroo",
+                    "Panther"
+                ],
+                "answer": "Kangaroo"
+            },
+    
+    "q3": {
+                "question": "What is the fastest animal alive?",
+                "options": [
+                    "Peregrine_Falcon",
+                    "Cheetah",
+                    "Sailfish",
+                    "Dragonfly"
+                ],
+                "answer": "Peregrine_Falcon"
+            },
+    "q4": {
+                "question": "Light travels at its fastest in?",
+                "options": [
+                    "Vacuum",
+                    "Salt_water",
+                    "Air_at_0°C",
+                    "Drizzle"
+                ],
+                "answer":"Vacuum"
+            },
+    "q5": {
+                "question": "Number of rings on the Olympic flag?",
+                "options": [
+                    "4",
+                    "6",
+                    "5",
+                    "3"
+                ],
+                "answer": "5"
+            },
+    "q6": {
+                "question": "Number of holes on a standard bowling ball?",
+                "options": [
+                    "4",
+                    "6",
+                    "5",
+                    "3"
+                ],
+                "answer": "3"
+            },
+    "q7": {
+                "question": "What are the main colors on the flag of Spain?",
+                "options": [
+                    "Black_and_yellow",
+                    "Green_and_white",
+                    "Blue_and_white",
+                    "Red_and_yellow"
+                ],
+                "answer": "Red_and_yellow"
+            },
+    "q8": {
+                "question": " What is the longest that an elephant has ever provably lived?",
+                "options": [
+                    "17_years",
+                    "49_years",
+                    "86_years",
+                    "142_years"
+                ],
+                "answer": "86_years"
+            },
+    "q9": {
+                "question": "'War and Peace' originally written in?",
+                "options": [
+                    "Russian",
+                    "German",
+                    "Spanish",
+                    "Portuguese"
+                ],
+                "answer": "Russian"
+            },
+    "q10": {
+                "question": "Which of these countries was not a Soviet Republic in USSR?",
+                "options": [
+                    "Azerbaijan",
+                    "Kyrgyzstan",
+                    "Moldova",
+                    "Serbia"
+                ],
+                "answer": "Serbia"
+            },
+    "q11": {
+                "question": "What was the first successful vaccine developed in history?",
+                "options": [
+                    "Cholera",
+                    "Rabies",
+                    "Scarlet_Fever",
+                    "Smallpox"
+                ],
+                "answer": "Smallpox"
+            },            
+    "q12": {
+                "question": "What is the name for the Jewish New Year?",
+                "options": [
+                    "Yom_Kippur",
+                    "Rosh_Hashanah",
+                    "Kwanzaa",
+                    "Hanukkah"
+                ],
+                "answer": "Rosh_Hashanah"
+            },  
+    "q13": {
+                "question": "number of blue stripes on the national flag of USA?",
+                "options": [
+                    "7",
+                    "4",
+                    "0",
+                    "3"
+                ],
+                "answer": "0"
+            }, 
+    "q14": {
+                "question": "What restaurant franchise advises you to 'Eat Fresh'?",
+                "options": [
+                    "KFC",
+                    "Subway",
+                    "McDonald's",
+                    "Taco_Bell"
+                ],
+                "answer": "Subway"                 
+            },
+    "q15": {
+                "question": "What did Alfred Nobel develop?",
+                "options": [
+                    "Dynamite",
+                    "Nobelium",
+                    "Gunpowder",
+                    "Atomic_bomb"
+                ],
+                "answer": "Dynamite"
+            },        
+    "q16": {
+                "question": "How many spaces are on a standard Monopoly board?",
+                "options": [
+                    "20",
+                    "40",
+                    "80",
+                    "60"
+                ],
+                "answer": "40"
+            },        
+            "q17": {
+                "question": "Which country hosted the Summer Olympics in 2016?",
+                "options": [
+                    "China",
+                    "Brazil",
+                    "Spain",
+                    "Greece"
+                ],
+                "answer": "Brazil"
+            }, 
+            "q18": {
+                "question": "What temperature is the same in Celsius and Fahrenheit?",
+                "options": [
+                    "+100°",
+                    "+40°",
+                    "0°",
+                    "-40°"
+                ],
+                "answer": "-40°"
+            }, 
+            "q19": {
+                "question": "Which movie was the first to win 11 Academy Awards?",
+                "options": [
+                    "Ben-Hur",
+                    "La_La_Land",
+                    "Sound_of_Music",
+                    "Titanic"
+                ],
+                "answer": "Ben-Hur"
+            }, 
+            "q20": {
+                "question": "Which mammal first reached Earth's orbit alive?",
+                "options": [
+                    "Cat",
+                    "Dog",
+                    "Monkey",
+                    "Dog"
+                ],
+                "answer": "Dog"
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
