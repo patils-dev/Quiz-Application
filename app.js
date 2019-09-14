@@ -49,4 +49,8 @@ function checkAns(text,index)
 {
    console.log(text);
    console.log(index);
+   $.getJSON('ques-db.json',function(json){
+        
+    
+  })
 }
