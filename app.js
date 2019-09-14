@@ -1,21 +1,21 @@
 
 $(document).ready(function(){
-    getJSON();
+    getJSON1();
 })
 
-function getJSON(){
+function getJSON1(){
   let queCount=
   $.getJSON('ques-db.json',function(json){
       // questions = json;
       const keys = Object.values(json)
-      console.log(keys);
+      // console.log(keys);
       // [0 -> 1] * 1
       let randIndex =Math.floor(Math.round(Math.random()*(keys.length)));
       // console.log(randIndex);
       // console.log(keys[randIndex])
       // console.log(keys[randIndex].question)
       let selectedIndex=randIndex;
-      console.log(keys[randIndex].options[1])
+      // console.log(keys[randIndex].options[1])
     
         $(".question").text(keys[randIndex].question);
         $(".option1").text(keys[randIndex].options[0]);
@@ -41,16 +41,26 @@ function getJSON(){
         });
 })
 }
+
+
 $(".next").click(function(){
-  getJSON(); 
+  getJSON1(); 
+  checkAns();
 });
- 
+let correctAns=0
 function checkAns(text,index)
 {
-   console.log(text);
-   console.log(index);
+  // console.log("checkans")
+  //  console.log(text);
+  //  console.log(index);
    $.getJSON('ques-db.json',function(json){
-        
-    
+    const keys = Object.values(json) 
+    // console.log(keys)
+    if(text==keys[index].answer)
+    {
+      correctAns++;
+      // console.log(correctAns)
+    }
+    console.log(correctAns)
   })
 }
