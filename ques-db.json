@@ -48,7 +48,7 @@
                     "5",
                     "3"
                 ],
-                "answer": "5"
+                "answer": "3"
             },
     "q6": {
                 "question": "Number of holes on a standard bowling ball?",
@@ -68,7 +68,7 @@
                     "Blue and white",
                     "Red and yellow"
                 ],
-                "answer": "Red and yellow"
+                "answer": "3"
             },
     "q8": {
                 "question": " What is the longest that an elephant has ever provably lived?",
@@ -78,7 +78,7 @@
                     "86 years",
                     "142 years"
                 ],
-                "answer": "86 years"
+                "answer": "2"
             },
     "q9": {
                 "question": "'War and Peace' originally written in?",
@@ -88,7 +88,7 @@
                     "Spanish",
                     "Portuguese"
                 ],
-                "answer": "Russian"
+                "answer": "0"
             },
     "q10": {
                 "question": "Which of these countries was not a Soviet Republic in USSR?",
@@ -98,7 +98,7 @@
                     "Moldova",
                     "Serbia"
                 ],
-                "answer": "Serbia"
+                "answer": "3"
             },
     "q11": {
                 "question": "What was the first successful vaccine developed in history?",
@@ -108,7 +108,7 @@
                     "Scarlet Fever",
                     "Smallpox"
                 ],
-                "answer": "Smallpox"
+                "answer": "3"
             },            
     "q12": {
                 "question": "What is the name for the Jewish New Year?",
@@ -118,7 +118,7 @@
                     "Kwanzaa",
                     "Hanukkah"
                 ],
-                "answer": "Rosh Hashanah"
+                "answer": "1"
             },  
     "q13": {
                 "question": "number of blue stripes on the national flag of USA?",
@@ -128,7 +128,7 @@
                     "0",
                     "3"
                 ],
-                "answer": "0"
+                "answer": "2"
             }, 
     "q14": {
                 "question": "What restaurant franchise advises you to 'Eat Fresh'?",
@@ -138,7 +138,7 @@
                     "McDonald's",
                     "Taco Bell"
                 ],
-                "answer": "Subway"                 
+                "answer": "1"                 
             },
     "q15": {
                 "question": "What did Alfred Nobel develop?",
@@ -148,7 +148,7 @@
                     "Gunpowder",
                     "Atomic bomb"
                 ],
-                "answer": "Dynamite"
+                "answer": "0"
             },        
     "q16": {
                 "question": "How many spaces are on a standard Monopoly board?",
@@ -158,7 +158,7 @@
                     "80",
                     "60"
                 ],
-                "answer": "40"
+                "answer": "1"
             },        
             "q17": {
                 "question": "Which country hosted the Summer Olympics in 2016?",
@@ -168,7 +168,7 @@
                     "Spain",
                     "Greece"
                 ],
-                "answer": "Brazil"
+                "answer": "1"
             }, 
             "q18": {
                 "question": "What temperature is the same in Celsius and Fahrenheit?",
@@ -178,7 +178,7 @@
                     "0°",
                     "-40°"
                 ],
-                "answer": "-40°"
+                "answer": "3"
             }, 
             "q19": {
                 "question": "Which movie was the first to win 11 Academy Awards?",
@@ -188,7 +188,7 @@
                     "Sound of Music",
                     "Titanic"
                 ],
-                "answer": "Ben-Hur"
+                "answer": "0"
             }, 
             "q20": {
                 "question": "Which mammal first reached Earth's orbit alive?",
@@ -196,8 +196,8 @@
                     "Cat",
                     "Dog",
                     "Monkey",
-                    "Dog"
+                    "Rabbit"
                 ],
-                "answer": "Dog"
+                "answer": "1"
             }
 }
