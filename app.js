@@ -6,6 +6,37 @@
 //         })
 //     }
 // })
+window.onload=function()
+{
+    document.getElementsByClassName("opt1")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt2")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt3")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt4")[0].style.backgroundColor="#E0F2F1";
+}
+function getOption1(){
+    document.getElementsByClassName("opt1")[0].style.backgroundColor="#4DB6AC";
+    document.getElementsByClassName("opt2")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt3")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt4")[0].style.backgroundColor="#E0F2F1";
+}
+function getOption2(){
+    document.getElementsByClassName("opt1")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt2")[0].style.backgroundColor="#4DB6AC";
+    document.getElementsByClassName("opt3")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt4")[0].style.backgroundColor="#E0F2F1";
+}
+function getOption3(){
+    document.getElementsByClassName("opt1")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt2")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt3")[0].style.backgroundColor="#4DB6AC";
+    document.getElementsByClassName("opt4")[0].style.backgroundColor="#E0F2F1";
+}
+function getOption4(){
+    document.getElementsByClassName("opt1")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt2")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt3")[0].style.backgroundColor="#E0F2F1";
+    document.getElementsByClassName("opt4")[0].style.backgroundColor="#4DB6AC";
+}
 $(function(){
     // data in attributes
     // getAttributeData()

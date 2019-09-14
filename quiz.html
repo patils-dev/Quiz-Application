@@ -7,21 +7,28 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="quiz.css">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div class="container-fluid">
             <div class="col">
                 <div class="row">
                     <div class="col-6 questionNumber">1/10</div>
-                    <div class="col-1" id="prev">&#8249;</div>
+                    <div class="col-2 prev" onclick="getPrev()"><img src="left.png"></div>
+                   <div class="col-2 next" onclick="getNext()"><img src="right.png"></div>
+                   <div class="col-2"></div>
+                    <!-- <div class="col-1" id="prev">&#8249;</div>
                     <div class="col-1" id="next">&#8250;</div>
-                    <div class="col-4"></div>
+                    <div class="col-4"></div> -->
                 </div>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width,initial-scale=1.0">   
                 <div class="row" id="que">Brazil Belongs to?</div>
-                <div class="row opt1">North America</div>
-                <div class="row opt2">South America</div>
-                <div class="row opt3">Africa</div>
-                <div class="row opt4">Europe</div>
+                <div class="row opt1" onclick="getOption1()">North America</div>
+                <div class="row opt2" onclick="getOption2()">South America</div>
+                <div class="row opt3" onclick="getOption3()">Africa</div>
+                <div class="row opt4" onclick="getOption4()">Europe</div>
+                <div class="row submitButton" onclick="getResult()">Submit</div>
             </div>
         </div>
         <script src="app.js"></script>
