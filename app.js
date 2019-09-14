@@ -8,7 +8,7 @@ function getJSON1(){
   let queCount1=
   $.getJSON('ques-db.json',function(json){
       keys=Object.values(json)
-      
+      // console.log(keys.length)
       let randIndex =Math.floor(Math.round(Math.random()*(keys.length)));
       console.log(randIndex);
       selectedIndex=randIndex;
@@ -66,7 +66,7 @@ let queCount=0;
 let correctAns=0
 function checkAns(index,text)
 {
-  console.log("checkans")
+  console.log(keys[index].answer)
     if(text==keys[index].answer)
     {
       correctAns++;
