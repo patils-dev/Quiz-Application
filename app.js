@@ -1,3 +1,8 @@
+function getData(correctAns)
+{
+  localStorage.setItem('score', correctAns );
+}
+
 $(document).ready(function(){
     getJSON();
 })
@@ -76,7 +81,7 @@ function checkAns(index,text)
     if(text==keys[index].answer)
     {
       correctAns++;
-     
+      getData(correctAns);
     }
     queCount++;
    
@@ -86,7 +91,6 @@ $(".submitButton").click(displayScore())
  
 function displayScore()
 {
-    //  correctAns++;
-    //  console.log(correctAns)
-     $(".score").text(correctAns+"/ 10")
+  let score_value=localStorage.getItem('score') 
+     $(".score").text(score_value+"/ 10")
 }
