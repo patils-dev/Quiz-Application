@@ -12,19 +12,31 @@ function getJSON(){
 
   $(".questionNumber").text(queCount+"/ 10")
   
-  $.getJSON('ques-db.json',function(json){
+  $.getJSON('/ques-db.json',function(json){
       keys=Object.values(json)
-      //  console.log(keys)
-      let randIndex =Math.floor(Math.round(Math.random()*10));
-      // console.log(randIndex);
-      selectedIndex=randIndex;
+      // let randIndex =Math.floor(Math.round(Math.random()*10));
+      //   selectedIndex=randIndex;
 
-        $(".question").text(keys[randIndex].question);
-        $(".option1").text(keys[randIndex].options[0]);
-        $(".option2").text(keys[randIndex].options[1]);
-        $(".option3").text(keys[randIndex].options[2]);
-        $(".option4").text(keys[randIndex].options[3]);
-        
+      //   $(".question").text(keys[randIndex].question);
+      //   $(".option1").text(keys[randIndex].options[0]);
+      //   $(".option2").text(keys[randIndex].options[1]);
+      //   $(".option3").text(keys[randIndex].options[2]);
+      //   $(".option4").text(keys[randIndex].options[3]);  
+
+      let arr= new Array();
+      $.each( json, function(key, obj)
+      {
+           $.each(obj,function(k,value){
+           arr.push(k,value)
+        });
+     });
+
+    //  console.log(arr)
+    
+
+     arr.forEach((key,value) => {
+      console.log(this.key,this.value);       
+     });
 })
 }
 
