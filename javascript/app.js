@@ -1,6 +1,6 @@
 let selectedIndex;
 let text;
-let queIndex=0;
+let queIndex=1;
 let arr;
 let ansArr=[];
 let queCount=0;
@@ -21,31 +21,27 @@ $(document).ready(function(){
             console.log(err);
         }
     });
-
     getQues();
 })
+   
 
 
 function getQues(){
     queCount++;
-
-    $(".questionNumber").text(queCount+"/ 10")
-
     // console.log("hii");
-    // console.log(result[0].questions[queIndex].question)
+    // console.log(result[0].questions[2].question)
     $(".question").text(result[0].questions[queIndex].question);
     $(".option1").text(result[0].questions[queIndex].options[0]);
     $(".option2").text(result[0].questions[queIndex].options[1]);
     $(".option3").text(result[0].questions[queIndex].options[2]);
     $(".option4").text(result[0].questions[queIndex].options[3]);
+    $(".questionNumber").text(queCount+"/ 10")
     queIndex++;
     if(queCount==10)
     {
          $(".submitButton").css("display", "flex");
     }
 }
-
-
 // ['q1':0,'q4':5]
 
 
