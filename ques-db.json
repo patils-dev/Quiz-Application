@@ -99,18 +99,7 @@
                     "Serbia"
                 ],
                 "answer": "Serbia"
-            },
-    "q11": {
-                "question": "What was the first successful vaccine developed in history?",
-                "options": [
-                    "Cholera",
-                    "Rabies",
-                    "Scarlet_Fever",
-                    "Smallpox"
-                ],
-                "answer": "Smallpox"
-            }          
-    
+            }
 }
 
 

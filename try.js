@@ -10,7 +10,6 @@ let ansArr=[];
 let queCount=0;
 
 
-
 $.getJSON('ques-db.json',function(json){
     keys=Object.values(json)
       arr=keys;})
@@ -66,17 +65,6 @@ $('div.option4').click(function() {
     text = $(this).text();
     console.log(text)
 })
-
-function storeAns(index,text)
-{
-    ansArr.push(text);
-    console.log(ansArr);
-}
-$(".submit").click(function(){
-    checkAns();
-    console.log("checkans")
-})
-
 function checkAns()
 {
     let correctAns=0;
@@ -89,6 +77,36 @@ function checkAns()
             correctAns++;
         }
     }
-    $(".score").text(correctAns+"/ 10")
+    console.log(correctAns);
+    alert(`You Scored : ${correctAns}`);
+    // document.getElementById('scored').innerText=correctAns;
+    // $(".score").text(correctAns+"/ 10")
 }
+
+
+function storeAns(index,text)
+{
+    ansArr.push(text);
+    console.log(ansArr);
+}
+$(".submitButton").click(function(){
+    checkAns();
+    // console.log("checkans")
+})
+
+// function checkAns()
+// {
+//     let correctAns=0;
+//     for(let i=0;i<=ansArr.length;i++)
+//     {
+//         console.log(ansArr[i])
+//         console.log(arr[i].answer)
+//         if(ansArr[i]==arr[i].answer)
+//         {
+//             correctAns++;
+//         }
+//     }
+//     console.log(correctAns);
+//     $(".score").text(correctAns+"/ 10")
+// }
 
