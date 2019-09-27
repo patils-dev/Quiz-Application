@@ -15,3 +15,5 @@ mongo.connect(db.url, { useNewUrlParser: true, useUnifiedTopology: true }, (err,
        console.log('connected to db');
    });
 })
+
+mongodb://cluster0-shard-00-00-jxeqq.mongodb.net:27017,cluster0-shard-00-01-jxeqq.mongodb.net:27017,cluster0-shard-00-02-jxeqq.mongodb.net:27017/test?replicaSet=Cluster0-shard-0

@@ -57,6 +57,8 @@ $(".next").click(function(){
 
 $('div.option1').click(function(){
     // text = $(this).index();
+    $(".option1").css("background-color", "#4DB6AC");
+    $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
     text = $(this).text();
     console.log(text)
 })
@@ -64,7 +66,8 @@ $('div.option1').click(function(){
 $('div.option2').click(function() {
 
     //  text = $(this).index();
-    index=
+    $(".option2").css("background-color", "#4DB6AC");
+    $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
     text = $(this).text();
    console.log(text)
 })
@@ -72,6 +75,8 @@ $('div.option2').click(function() {
 $('div.option3').click(function() {
 
     //  text = $(this).index();
+    $(".option3").css("background-color", "#4DB6AC");
+    $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
     text = $(this).text();
     console.log(text)
 })
@@ -79,6 +84,8 @@ $('div.option3').click(function() {
 $('div.option4').click(function() {
 
     //  text = $(this).index();
+    $(".option4").css("background-color", "#4DB6AC");
+  $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
     text = $(this).text();
     console.log(text)
 })
@@ -97,7 +104,7 @@ function checkAns()
     console.log(correctAns);
     alert(`You Scored : ${correctAns}`);
     // document.getElementById('scored').innerText=correctAns;
-    // $(".score").text(correctAns+"/ 10")
+    $(".score").html(correctAns+"/ 10")
 }
 
 
