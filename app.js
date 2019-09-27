@@ -1,99 +1,81 @@
-
-$(document).ready(function(){
-    getJSON();
-})
-let selectedIndex;
-let keys=" ";
-let text;
-let queCount=1;
-let correctAns=0;
-
-function getJSON(){
-
-  $(".questionNumber").text(queCount+"/ 10")
-  
-  $.getJSON('ques-db.json',function(json){
-      keys=Object.values(json)
-      //  console.log(keys)
-      let randIndex =Math.floor(Math.round(Math.random()*10));
-      // console.log(randIndex);
-      selectedIndex=randIndex;
-
-        $(".question").text(keys[randIndex].question);
-        $(".option1").text(keys[randIndex].options[0]);
-        $(".option2").text(keys[randIndex].options[1]);
-        $(".option3").text(keys[randIndex].options[2]);
-        $(".option4").text(keys[randIndex].options[3]);
-        
-})
-}
-
-
-$(".next").click(function(){
-  checkAns(selectedIndex,text);
-  if(queCount<11)
-  {
-  getJSON();
-  $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
-  }
-  if(queCount==10)
-  {
-    $(".submitButton").css("display", "flex");
-  }
-  
-});
-
-$('div.option1').click(function(){
+// $(document).ready(function(){
+//     getJSON1();
+// })
+// let selectedIndex;
+// let keys=" ";
+// let text;
+// let arr= [];      
+// function getJSON1(){
  
-  $(".option1").css("background-color", "#4DB6AC");
-  $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
-    text = $(this).text();
-   
-})
- 
-$('div.option2').click(function() {
-  // console.log("div2")
-  $(".option2").css("background-color", "#4DB6AC");
-  $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
-   text = $(this).text();
- 
-})
+//   // $.getJSON('ques-db.json',function(json){
+//       keys=Object.values(json)
+//     let arr=keys;
+//     // console.log(arr)
+//       // let randIndex =Math.floor(Math.round(Math.random()*(keys.length)));
+//       // console.log(randIndex);
+//       // selectedIndex=randIndex;
 
-$('div.option3').click(function() {
- 
-  $(".option3").css("background-color", "#4DB6AC");
-  $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
-     text = $(this).text();
-    
-})
 
-$('div.option4').click(function() {
-  // console.log("div4")
-  $(".option4").css("background-color", "#4DB6AC");
-  $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
-     text = $(this).text();
-    //  console.log(text); 
-})
+//       // THE ARRAY TO STORE JSON ITEMS.
+//     //   let arr= new Array();
+//     //   $.each( json, function(key, obj)
+//     //   {
+//     //        $.each(obj,function(k,value){
+//     //        arr.push(k,value)
+//     //     });
+//     //  });
+//     //  console.log(arr);
 
-function checkAns(index,text)
-{
-  
-    if(text==keys[index].answer)
-    {
-      correctAns++;
-      getData(correctAns);
-    }
-    queCount++;
-   
-}
-function getData(correctAns)
-{
-  localStorage.setItem('score', correctAns );
-} 
-$(".submitButton").click(displayScore())
- 
-function displayScore()
-{
-  let score_value=localStorage.getItem('score') 
-     $(".score").text(score_value+"/ 10")
-}
+//     //  arr.forEach((key,value) => {
+//     //   console.log(key);       
+//     //  });
+
+//         $(".question").text(keys[randIndex].question);
+//         $(".option1").text(keys[randIndex].options[0]);
+//         $(".option2").text(keys[randIndex].options[1]);
+//         $(".option3").text(keys[randIndex].options[2]);
+//         $(".option4").text(keys[randIndex].options[3]);
+// })
+// }
+
+// $('div.option1').click(function(){
+//   // console.log("div1")
+//     text = $(this).index();
+//     console.log(text)
+// })
+//  $(".next").click(function(){
+//   checkAns(selectedIndex,text);
+//   getJSON1();
+// });
+// $('div.option2').click(function() {
+//    text = $(this).text();
+// })
+
+// $('div.option3').click(function() {
+//     let text = $(this).text();
+// })
+
+// $('div.option4').click(function() {
+//     let text = $(this).text();
+// })
+
+
+// let queCount=0;
+// let correctAns=0
+// function checkAns(index,text)
+// {
+//   // console.log("checkans");
+//     if(text==keys[index].answer)
+//     {
+//       correctAns++;
+//     }
+//     console.log(index);
+//     console.log(text)
+//     let arr1=new Array();
+
+//         arr.push(index);
+
+//     queCount++;
+//     // console.log(correctAns)
+//     // console.log(queCount)
+// }

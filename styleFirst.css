@@ -27,7 +27,6 @@
     font-size: 4em;
     display: flex; 
     color: var(--primaryColor);
-    
 }
 .score{
     height: 33.33%;
@@ -58,7 +57,6 @@
     border:none;
     margin:0;
     color:var(--baseColor2);
-    
     height: 29px;;
     cursor: pointer;
 }
