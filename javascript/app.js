@@ -1,6 +1,3 @@
-$(document).ready(function(){
-    getJSON1();
-})
 let selectedIndex;
 let keys=" ";
 let text;
@@ -8,6 +5,57 @@ let quesIndex=0;
 let arr;
 let ansArr=[];
 let queCount=0;
+let ret;
+
+
+$(document).ready(function(){
+    // $.ajax({
+    //     url: 'http://localhost:8000/',
+    //     // dataType: "jsonp",
+    //     data: '{"data": "TEST"}',
+    //     type: 'GET',
+    //     // jsonpCallback: 'callback', // this is not relevant to the POST anymore
+    //     success: function (data) {
+    //         var ret = jQuery.parseJSON(data);
+    //         // $('#lblResponse').html(ret.msg);
+    //         console.log('Success: ')
+    //     },
+    //     error: function (xhr, status, error) {
+    //         console.log('Error: ' + error.message);
+    //         $('#lblResponse').html('Error connecting to the server.');
+    //     }
+    //     });
+
+
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: "http://127.0.0.1:8000/",
+        success: function(data){
+           let dataNew=data;
+            console.log(dataNew)
+        //     ret = jQuery.parseJSON(data);
+        //    console.log(ret);
+        },
+        error:function(err){
+            console.log(err);
+        }
+    });
+
+    // $.ajax({
+    //     url:'http://localhost:8000/'
+    //   }).done(function(data) {
+    //     //   $('#startModal').modal('hide');
+    //     //   $('#instruction').css("display", "block");
+    //     //   localStorage.setItem('qSet',data);
+    //     console.log(data);
+    //     $.each(data,function(k,v){
+    //         console.log(k+" is "+v)
+    //     })
+    //       startTimer();
+    //   });
+    getJSON1();
+})
 
 
 $.getJSON('../ques-db.json',function(json){
@@ -17,7 +65,7 @@ $.getJSON('../ques-db.json',function(json){
 function getJSON1(){
         queCount++;
         $(".questionNumber").text(queCount+"/ 10")
-        console.log(arr);
+        // console.log(arr);
         $(".question").text(arr[quesIndex].question);
         $(".option1").text(arr[quesIndex].options[0]);
         $(".option2").text(arr[quesIndex].options[1]);
@@ -94,19 +142,5 @@ $(".submitButton").click(function(){
     // console.log("checkans")
 })
 
-// function checkAns()
-// {
-//     let correctAns=0;
-//     for(let i=0;i<=ansArr.length;i++)
-//     {
-//         console.log(ansArr[i])
-//         console.log(arr[i].answer)
-//         if(ansArr[i]==arr[i].answer)
-//         {
-//             correctAns++;
-//         }
-//     }
-//     console.log(correctAns);
-//     $(".score").text(correctAns+"/ 10")
-// }
+
 
