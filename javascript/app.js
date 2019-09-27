@@ -6,24 +6,6 @@ let ansArr=[];
 let queCount=0;
 let result;
 
-
-function getQues(){
-    queCount++;
-
-    $(".questionNumber").text(queCount+"/ 10")
-    // console.log(arr);
-    if(queCount==10)
-    {
-         $(".submitButton").css("display", "flex");
-    }
-    $(".question").text(result[0].questions[queIndex].question);
-    $(".option1").text(result[0].questions[queIndex].options[0]);
-    $(".option2").text(result[0].questions[queIndex].options[1]);
-    $(".option3").text(result[0].questions[queIndex].options[2]);
-    $(".option4").text(result[0].questions[queIndex].options[3]);
-    queIndex++;
-}
-
 $(document).ready(function(){
 
     $.ajax({
@@ -32,20 +14,39 @@ $(document).ready(function(){
         url: "http://localhost:8000/",
         success: function(data){
            result=data;
-           console.log(result)
+        //    console.log(result)
         //    console.log(result[0].questions[0].question)
         },
         error:function(err){
             console.log(err);
         }
     });
-    getQues();
 
-   
+    getQues();
 })
 
-// ['q1':0,'q4':5]
 
+function getQues(){
+    queCount++;
+
+    $(".questionNumber").text(queCount+"/ 10")
+
+    // console.log("hii");
+    // console.log(result[0].questions[queIndex].question)
+    $(".question").text(result[0].questions[queIndex].question);
+    $(".option1").text(result[0].questions[queIndex].options[0]);
+    $(".option2").text(result[0].questions[queIndex].options[1]);
+    $(".option3").text(result[0].questions[queIndex].options[2]);
+    $(".option4").text(result[0].questions[queIndex].options[3]);
+    queIndex++;
+    if(queCount==10)
+    {
+         $(".submitButton").css("display", "flex");
+    }
+}
+
+
+// ['q1':0,'q4':5]
 
 
 $(".next").click(function(){
@@ -55,10 +56,8 @@ $(".next").click(function(){
         getQues();
         $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
     }
-    
 
 });
-
 
 $('div.option1').click(function(){
     // text = $(this).index();
@@ -66,7 +65,6 @@ $('div.option1').click(function(){
     console.log(text)
 })
 
- 
 $('div.option2').click(function() {
 
     //  text = $(this).index();
