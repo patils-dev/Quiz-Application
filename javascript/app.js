@@ -1,78 +1,59 @@
 let selectedIndex;
-let keys=" ";
 let text;
 let quesIndex=0;
 let arr;
 let ansArr=[];
 let queCount=0;
-let ret;
+let result;
 
 
 $(document).ready(function(){
-    // $.ajax({
-    //     url: 'http://localhost:8000/',
-    //     // dataType: "jsonp",
-    //     data: '{"data": "TEST"}',
-    //     type: 'GET',
-    //     // jsonpCallback: 'callback', // this is not relevant to the POST anymore
-    //     success: function (data) {
-    //         var ret = jQuery.parseJSON(data);
-    //         // $('#lblResponse').html(ret.msg);
-    //         console.log('Success: ')
-    //     },
-    //     error: function (xhr, status, error) {
-    //         console.log('Error: ' + error.message);
-    //         $('#lblResponse').html('Error connecting to the server.');
-    //     }
-    //     });
-
+    
 
     $.ajax({
         type: "GET",
         dataType: "json",
-        url: "http://127.0.0.1:8000/",
+        url: "http://localhost:8000/",
         success: function(data){
-           let dataNew=data;
-            console.log(dataNew)
-        //     ret = jQuery.parseJSON(data);
-        //    console.log(ret);
+           result=data;
         },
         error:function(err){
             console.log(err);
         }
     });
 
-    // $.ajax({
-    //     url:'http://localhost:8000/'
-    //   }).done(function(data) {
-    //     //   $('#startModal').modal('hide');
-    //     //   $('#instruction').css("display", "block");
-    //     //   localStorage.setItem('qSet',data);
-    //     console.log(data);
-    //     $.each(data,function(k,v){
-    //         console.log(k+" is "+v)
-    //     })
-    //       startTimer();
-    //   });
-    getJSON1();
+    getQues();
 })
 
+// ['q1':0,'q4':5]
 
-$.getJSON('../ques-db.json',function(json){
-    keys=Object.values(json)
-      arr=keys;})
 
-function getJSON1(){
+function getQues(){
         queCount++;
+
         $(".questionNumber").text(queCount+"/ 10")
         // console.log(arr);
-        $(".question").text(arr[quesIndex].question);
-        $(".option1").text(arr[quesIndex].options[0]);
-        $(".option2").text(arr[quesIndex].options[1]);
-        $(".option3").text(arr[quesIndex].options[2]);
-        $(".option4").text(arr[quesIndex].options[3]);
-        quesIndex++;
+        $(".question").text(result[0].questions[queCount].question);
+        $(".option1").text(result[0].questions[queCount].options[0]);
+        $(".option2").text(result[0].questions[queCount].options[1]);
+        $(".option3").text(result[0].questions[queCount].options[2]);
+        $(".option4").text(result[0].questions[queCount].options[3]);
+
 }
+$(".next").click(function(){
+    storeAns(selectedIndex,text)
+    if(queCount<10)
+    {
+        getQues();
+        $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
+    }
+    if(queCount==10)
+    {
+        $(".submitButton").css("display", "flex");
+    }
+
+});
+
 
 $('div.option1').click(function(){
     // text = $(this).index();
@@ -80,22 +61,11 @@ $('div.option1').click(function(){
     console.log(text)
 })
 
- $(".next").click(function(){
-        storeAns(selectedIndex,text)
-        if(queCount<10)
-        {
-            getJSON1();
-            $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
-        }
-        if(queCount==10)
-        {
-            $(".submitButton").css("display", "flex");
-        }
-
-});
+ 
 $('div.option2').click(function() {
 
     //  text = $(this).index();
+    index=
     text = $(this).text();
    console.log(text)
 })
@@ -119,8 +89,8 @@ function checkAns()
     for(let i=0;i<ansArr.length;i++)
     {
         console.log(ansArr[i])
-        console.log(arr[i].answer)
-        if(ansArr[i]==arr[i].answer)
+        // console.log(arr[i].answer)
+        if(ansArr[i]==result[0].questions[i].answer)
         {
             correctAns++;
         }
