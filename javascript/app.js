@@ -6,9 +6,8 @@ $("#submitEmail").click(function(){
     }
 })
 
-
-let selectedIndex;
 let text;
+let selectedIndex=-1;
 let queIndex=0;
 let arr;
 let ansArr=[];
@@ -16,50 +15,53 @@ let queCount=0;
 let result;
 
 $(document).ready(function(){
-
     $.ajax({
         type: "GET",
         dataType: "json",
         url: "http://localhost:8000/",
+        // crossDomain: true,
+        // headers: {
+        //     // "accept": "application/json",
+        //     'Access-Control-Allow-Origin':"*"
+        // },
+        
+        // access-control-allow-origin: ,
         success: function(data){
            result=data;
-        //    console.log(result)
+           console.log(result)
+           getQues();
         //    console.log(result[0].questions[0].question)
         },
         error:function(err){
             console.log(err);
         }
     });
-
-    getQues();
+    
 })
+   
 
 
 function getQues(){
     queCount++;
-
-    $(".questionNumber").text(queCount+"/ 10")
-
     // console.log("hii");
-    // console.log(result[0].questions[queIndex].question)
+    // console.log(result[0].questions[2].question)
     $(".question").text(result[0].questions[queIndex].question);
     $(".option1").text(result[0].questions[queIndex].options[0]);
     $(".option2").text(result[0].questions[queIndex].options[1]);
     $(".option3").text(result[0].questions[queIndex].options[2]);
     $(".option4").text(result[0].questions[queIndex].options[3]);
+    $(".questionNumber").text(queCount+"/ 10")
     queIndex++;
     if(queCount==10)
     {
          $(".submitButton").css("display", "flex");
     }
 }
-
-
 // ['q1':0,'q4':5]
 
 
 $(".next").click(function(){
-    storeAns(selectedIndex,text)
+    storeAns(selectedIndex)
     if(queCount<10)
     {
         getQues();
@@ -69,31 +71,38 @@ $(".next").click(function(){
 });
 
 $('div.option1').click(function(){
-    // text = $(this).index();
-    text = $(this).text();
-    console.log(text)
+    selectedIndex = 0;
+    $(".option1").css("background-color", "#4DB6AC");
+    $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
+    // text = $(this).text();
+    console.log(selectedIndex)
 })
 
 $('div.option2').click(function() {
 
-    //  text = $(this).index();
-    index=
-    text = $(this).text();
-   console.log(text)
+    selectedIndex = 1;
+    $(".option2").css("background-color", "#4DB6AC");
+    $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
+    // text = $(this).text();
+   console.log(selectedIndex)
 })
 
 $('div.option3').click(function() {
 
-    //  text = $(this).index();
-    text = $(this).text();
-    console.log(text)
+    selectedIndex =2;
+    $(".option3").css("background-color", "#4DB6AC");
+    $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
+    // text = $(this).text();
+    console.log(selectedIndex)
 })
 
 $('div.option4').click(function() {
 
-    //  text = $(this).index();
-    text = $(this).text();
-    console.log(text)
+    selectedIndex =3;
+    $(".option4").css("background-color", "#4DB6AC");
+    $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
+    // text = $(this).text();
+    console.log(selectedIndex)
 })
 function checkAns()
 {
@@ -110,18 +119,19 @@ function checkAns()
     console.log(correctAns);
     alert(`You Scored : ${correctAns}`);
     // document.getElementById('scored').innerText=correctAns;
-    // $(".score").text(correctAns+"/ 10")
+    $(".score").html(correctAns+"/ 10")
 }
 
 
-function storeAns(index,text)
+function storeAns(index)
 {
-    ansArr.push(text);
+    ansArr.push(index);
+    selectedIndex = -1;
+    console.log(index)
     console.log(ansArr);
 }
 $(".submitButton").click(function(){
     checkAns();
-    // console.log("checkans")
 })
 
 
