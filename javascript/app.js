@@ -1,27 +1,33 @@
-let selectedIndex;
-let text;
-let queIndex=1;
+let selectedIndex=-1;
+let queIndex=0;
 let arr;
 let ansArr=[];
 let queCount=0;
 let result;
 
 $(document).ready(function(){
-
     $.ajax({
         type: "GET",
         dataType: "json",
         url: "http://localhost:8000/",
+        // crossDomain: true,
+        // headers: {
+        //     // "accept": "application/json",
+        //     'Access-Control-Allow-Origin':"*"
+        // },
+        
+        // access-control-allow-origin: ,
         success: function(data){
            result=data;
-        //    console.log(result)
+           console.log(result)
+           getQues();
         //    console.log(result[0].questions[0].question)
         },
         error:function(err){
             console.log(err);
         }
     });
-    getQues();
+    
 })
    
 
@@ -46,7 +52,7 @@ function getQues(){
 
 
 $(".next").click(function(){
-    storeAns(selectedIndex,text)
+    storeAns(selectedIndex)
     if(queCount<10)
     {
         getQues();
@@ -56,38 +62,38 @@ $(".next").click(function(){
 });
 
 $('div.option1').click(function(){
-    // text = $(this).index();
+    selectedIndex = 0;
     $(".option1").css("background-color", "#4DB6AC");
     $(".option3,.option2,.option4").css("background-color", "#E0F2F1");
-    text = $(this).text();
-    console.log(text)
+    // text = $(this).text();
+    console.log(selectedIndex)
 })
 
 $('div.option2').click(function() {
 
-    //  text = $(this).index();
+    selectedIndex = 1;
     $(".option2").css("background-color", "#4DB6AC");
     $(".option1,.option3,.option4").css("background-color", "#E0F2F1");
-    text = $(this).text();
-   console.log(text)
+    // text = $(this).text();
+   console.log(selectedIndex)
 })
 
 $('div.option3').click(function() {
 
-    //  text = $(this).index();
+    selectedIndex =2;
     $(".option3").css("background-color", "#4DB6AC");
     $(".option1,.option2,.option4").css("background-color", "#E0F2F1");
-    text = $(this).text();
-    console.log(text)
+    // text = $(this).text();
+    console.log(selectedIndex)
 })
 
 $('div.option4').click(function() {
 
-    //  text = $(this).index();
+    selectedIndex =3;
     $(".option4").css("background-color", "#4DB6AC");
-  $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
-    text = $(this).text();
-    console.log(text)
+    $(".option1,.option2,.option3").css("background-color", "#E0F2F1");
+    // text = $(this).text();
+    console.log(selectedIndex)
 })
 function checkAns()
 {
@@ -108,14 +114,15 @@ function checkAns()
 }
 
 
-function storeAns(index,text)
+function storeAns(index)
 {
-    ansArr.push(text);
+    ansArr.push(index);
+    selectedIndex = -1;
+    console.log(index)
     console.log(ansArr);
 }
 $(".submitButton").click(function(){
     checkAns();
-    // console.log("checkans")
 })
 
 
