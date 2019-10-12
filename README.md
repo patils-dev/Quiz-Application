@@ -5,6 +5,6 @@
 ## Technology Used:
 HTML,CSS,JavaScript,Node.js,Express.js,mongoDB
 ## Image:
-![alt text](image/weather.png)
+![alt text](images/quiz_homepage.png)
 #### You can access it here (use Google Chrome!):
 https://patils-dev.github.io/WeatherAppv1/
