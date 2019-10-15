@@ -12,16 +12,12 @@
     background-color: var(--baseColor);
     justify-content: center;
 }
-
-.logo,.startquiz,.email{
-    height: 20%;
+.logo,.startquiz{
+    height: 33.33%;
     width: 100vw;
     justify-content: center;
     align-items: center;
     display: flex; 
-}
-.startquiz{
-    display: none; 
 }
 .heading{
     height: 33.33%;
