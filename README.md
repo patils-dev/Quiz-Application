@@ -1,10 +1,8 @@
 
 
 # Quiz-Application
- lets answer some questions! This quiz application display question and we have to select answer for these questions.
+ lets answer some questions! This quiz application display question and have to select correct answer for these questions.I hope you will enjoy it.
 ## Technology Used:
-HTML,CSS,JavaScript,Node.js,Express.js,mongoDB
+HTML,CSS,JavaScript,Node.js,Express.js,mongoDB.
 ## Image:
-![alt text](image/weather.png)
-#### You can access it here (use Google Chrome!):
-https://patils-dev.github.io/WeatherAppv1/
+![alt text](images/quiz_homepage.png)
