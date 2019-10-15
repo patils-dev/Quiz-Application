@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
   getJSON1();
 })
@@ -10,7 +11,7 @@ let ansArr=[];
 let queCount=0;
 
 
-$.getJSON('ques-db.json',function(json){
+$.getJSON('../ques-db.json',function(json){
   keys=Object.values(json)
     arr=keys;})
 
