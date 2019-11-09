@@ -6,6 +6,5 @@
 HTML,CSS,JavaScript,Node.js,Express.js,mongoDB.
 ## Image:
 ![alt text](images/quiz_homepage.png)
-##link
-[link text itself]: 
-http://www.reddit.com
+## Visit:
+https://smita-dev.github.io/Quiz-Application/
