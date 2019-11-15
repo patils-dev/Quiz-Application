@@ -1,7 +1,4 @@
 
-$(document).ready(function(){
-  getJSON1();
-})
 let selectedIndex;
 let keys=" ";
 let text;
@@ -10,15 +7,21 @@ let arr;
 let ansArr=[];
 let queCount=0;
 
+//this function will get called after loading html document
+$(document).ready(function(){
+  getData();
+})
 
+//this function is for getting question's data from database
 $.getJSON('../ques-db.json',function(json){
-  keys=Object.values(json)
-    arr=keys;})
+    keys=Object.values(json)
+    arr=keys;
+})
 
-function getJSON1(){
+//this question will display question and option data
+function getData(){
       queCount++;
       $(".questionNumber").text(queCount+"/ 10")
-      console.log(arr);
       $(".question").text(arr[quesIndex].question);
       $(".option1").text(arr[quesIndex].options[0]);
       $(".option2").text(arr[quesIndex].options[1]);
@@ -27,13 +30,10 @@ function getJSON1(){
       quesIndex++;
 }
 
-$('div.option1').click(function(){
-  // text = $(this).index();
-  text = $(this).text();
-  console.log(text)
-})
-
+//this function called after clicking on next button 
+//this will display next question.
 $(".next").click(function(){
+
       storeAns(selectedIndex,text)
       if(queCount<10)
       {
@@ -46,37 +46,31 @@ $(".next").click(function(){
       }
 
 });
-$('div.option2').click(function() {
 
-  //  text = $(this).index();
+$('div.option1').click(function(){
   text = $(this).text();
- console.log(text)
+})
+
+$('div.option2').click(function() {
+  text = $(this).text();
 })
 
 $('div.option3').click(function() {
-
-  //  text = $(this).index();
   text = $(this).text();
-  console.log(text)
 })
 
 $('div.option4').click(function() {
-
-  //  text = $(this).index();
   text = $(this).text();
-  console.log(text)
 })
 
 $(".submitButton").click(function(){
   checkAns();
-  // console.log("checkans")
 })
 
 
 function storeAns(index,text)
 {
-  ansArr.push(text);
-  console.log(ansArr);
+    ansArr.push(text);
 }
 
 function checkAns()
@@ -91,8 +85,5 @@ function checkAns()
           correctAns++;
       }
   }
-  // console.log(correctAns);
   alert(`You Scored : ${correctAns}`);
-  // document.getElementById('scored').innerText=correctAns;
-  // $(".score").text(correctAns+"/ 10")
 }
