@@ -47,32 +47,45 @@ $(".next").click(function(){
 
 });
 
+//this function called after clicking on first option 
+//this function will asssign selectedindex as 0 and highlight that answer.
 $('div.option1').click(function(){
   text = $(this).text();
 })
 
+//this function called after clicking on second option 
+//this function will asssign selectedindex as 1 and highlight that answer.
 $('div.option2').click(function() {
   text = $(this).text();
 })
 
+//this function called after clicking on third option 
+//this function will asssign selectedindex as 2 and highlight that answer.
 $('div.option3').click(function() {
   text = $(this).text();
 })
 
+//this function called after clicking on fourth option 
+//this function will asssign selectedindex as 3 and highlight that answer.
 $('div.option4').click(function() {
   text = $(this).text();
 })
 
+//this function will execute after clicking on submit button
 $(".submitButton").click(function(){
   checkAns();
 })
 
-
+//this function will called after clicking on next button
+//it will store given answer index in array.
 function storeAns(index,text)
 {
     ansArr.push(text);
 }
 
+//this function will execute after submitting quiz 
+//In this function it will check for how many answer are correct or not 
+//and calculating score and displaying it.
 function checkAns()
 {
   let correctAns=0;
