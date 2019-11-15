@@ -9,7 +9,7 @@ let queCount=0;
 
 //this function will get called after loading html document
 $(document).ready(function(){
-  getData();
+    getData();
 })
 
 //this function is for getting question's data from database
@@ -37,14 +37,13 @@ $(".next").click(function(){
       storeAns(selectedIndex,text)
       if(queCount<10)
       {
-          getJSON1();
+          getData();
           $(".option1,.option2,.option3,.option4").css("background-color", "#E0F2F1");
       }
       if(queCount==10)
       {
           $(".submitButton").css("display", "flex");
       }
-
 });
 
 //this function called after clicking on first option 
@@ -81,6 +80,7 @@ $(".submitButton").click(function(){
 function storeAns(index,text)
 {
     ansArr.push(text);
+    console.log(ansArr);
 }
 
 //this function will execute after submitting quiz 
